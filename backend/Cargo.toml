@@ -1,0 +1,46 @@
+[package]
+name = "ers"
+version = "0.2.0"
+authors = [
+    "Narayanaperumal Gurusamy <gnperumal@gmail.com>"
+    ]
+edition = "2018"
+
+[dependencies]
+dotenv = "0.15"
+
+actix-web = {version = "2.0", features = []}
+actix-rt = "1.0"
+actix-identity = "0.2.1"
+actix-cors = "*"
+futures = "0.3"
+
+diesel = { version = "<=1.4.3", features = ["postgres", "uuidv07", "chrono", "r2d2"] }
+r2d2 = "0.8"
+diesel_migrations = "1.4.0"
+
+juniper = "0.14"
+
+uuid = { version = "~0.7", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+lazy_static = "1"
+log = "0.4.8"
+env_logger ="0.7.1"
+
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+
+rand = "0.7"
+argon2rs = "0.2"
+jsonwebtoken = "7.0.0-alpha.2"
+
+anyhow = "1.0"
+thiserror = "1.0"
+num = "0.2"
+shrinkwraprs = "0.2"
+
+structopt = "0.3"
+
+regex = "1"

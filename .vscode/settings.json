@@ -1,0 +1,25 @@
+{
+  "cSpell.enabled": true,
+  "sqltools.connections": [
+    {
+      "database": "ers",
+      "driver": "PostgreSQL",
+      "name": "ers",
+      "password": "r1e2w3q4",
+      "pgOptions": {
+        "ssl": false
+      },
+      "port": 5432,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "postgres"
+    }
+  ],
+  "rust.build_on_save": false,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.syntaxProfiles": {
+    "vue-html": "html",
+    "vue": "html"
+  }
+}

@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  pg:
+    image: postgres:12-alpine
+    command:
+      - 'postgres'
+      - '-c'
+      - 'max_connections=100'
+      - '-c'
+      - 'shared_buffers=256MB'
+    environment:
+      POSTGRES_PASSWORD: r1e2w3q4
+    ports:
+      - 5432:5432
+  web:
+    restart: always
+    build:
+      context: "."
+      dockerfile: "./backend/Dockerfile"

@@ -1,0 +1,20 @@
+use crate::database::PooledConnection;
+use crate::errors::ServiceResult;
+use crate::user::model::User;
+use crate::feedback::model::Feedback;
+use crate::participant::model::Participant;
+use crate::graphql::model::Context;
+use diesel::prelude::*;
+use uuid::Uuid;
+
+pub(crate) fn find_participant_by_feedback(
+    context: &Context,
+    feedback_id: Uuid,
+) -> Vec<User> {
+    use crate::schema::feedbacks::dsl::*;   
+    use crate::schema::users::dsl::*;
+    let conn: &PooledConnection = &context.db;
+    // users.inner_join(
+    //     feedbacks.on(user_id.eq(crate::schema::users::dsl::id))
+    // ).load::<User>(conn)?
+}

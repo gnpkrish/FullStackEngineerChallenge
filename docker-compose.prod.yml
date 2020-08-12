@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    container_name: ers_db
+    image: postgres
+    restart: always
+    ports:
+    - "5432:5432"
+    environment:
+    - POSTGRES_PASSWORD=r1e2w3q4
+  app:
+    container_name: ers_api
+    image: gnperumal/ers
+    restart: always
+    ports:
+    - "8000:8000"
+    environment:
+    - APP_HOST=0.0.0.0
+    - APP_PORT=8000
+    - DATABASE_URL=postgres://postgres:r1e2w3q4@db/postgres
+    depends_on:
+    - db

@@ -1,0 +1,11 @@
+CREATE TABLE users (
+  id UUID PRIMARY KEY NOT NULL,
+  hash BYTEA NOT NULL,
+  salt VARCHAR(255) NOT NULL,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250),
+  role VARCHAR(120) NOT NULL DEFAULT 'employee',
+  created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+CREATE UNIQUE INDEX users__email_idx ON users(email);
